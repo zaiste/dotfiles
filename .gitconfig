@@ -13,6 +13,7 @@
   # add
   a = add # add
   ci = commit 
+  co = checkout
 
   s = status --short
 

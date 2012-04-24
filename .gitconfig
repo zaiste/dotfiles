@@ -10,20 +10,22 @@
   old = red bold
   new = green bold
 [alias]
-  # add
-  a = add # add
+  a = add 
+  ap = add -p
   ci = commit 
   co = checkout
+  cs = commit -s
+  r = remote
+  br = branch
 
   s = status --short
 
   # log
   l = log --graph --date=short
-  changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
-  short = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\"
+  changes = log --pretty=format:\"%Cred%h %Cgreen(%cr) %C(bold blue)<%cn>%Creset %s\" --name-status
+  short = log --pretty=format:\"%Cred%h %Cgreen(%cr) \t%C(bold blue):%cn:%Creset %s\"
   changelog = log --pretty=format:\" * %s\"
-  shortnocolor = log --pretty=format:\"%h %cr %cn %s\"
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue):%an:%Creset' --abbrev-commit --date=relative
 
 [user]
   name = Zaiste λ

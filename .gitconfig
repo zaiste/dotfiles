@@ -11,22 +11,33 @@
   new = green bold
 [alias]
   a = add 
-  ap = add -p
-  ci = commit 
-  co = checkout
-  cs = commit -s
-  r = remote
-  br = branch
+  chunk = add --patch
 
   s = status --short
 
+  c = commit -m
+  ci = commit 
+  ca = commit -am
+  cs = commit -s
+  amend = commit --amend
+
+  co = checkout
+  re = remote
+  rv = remote -v
+  br = branch
+  bv = branch -v
+
+
   # log
   l = log --graph --date=short
-  changes = log --pretty=format:\"%Cred%h %Cgreen(%cr) %C(bold blue)<%cn>%Creset %s\" --name-status
-  short = log --pretty=format:\"%Cred%h %Cgreen(%cr) \t%C(bold blue):%cn:%Creset %s\"
-  changelog = log --pretty=format:\" * %s\"
+  changes = log --pretty=format:'%Cred%h %Cgreen(%cr) %C(bold blue)<%cn>%Creset %s' --name-status
+  short = log --pretty=format:'%Cred%h %Cgreen(%cr) \t%C(bold blue):%cn:%Creset %s'
+  changelog = log --pretty=format:' * %s'
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue):%an:%Creset' --abbrev-commit --date=relative
 
 [user]
-  name = Zaiste λ
+  name = Zaiste! λ
   email = oh@zaiste.net 
+
+[github]
+  user = zaiste

@@ -27,7 +27,6 @@
   br = branch
   bv = branch -v
 
-
   # log
   l = log --graph --date=short
   changes = log --pretty=format:'%Cred%h %Cgreen(%cr) %C(bold blue)<%cn>%Creset %s' --name-status

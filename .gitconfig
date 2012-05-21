@@ -22,10 +22,21 @@
   amend = commit --amend
 
   co = checkout
+  cb = checkout -b
+
   re = remote
   rv = remote -v
   br = branch
   bv = branch -v
+
+  pl = pull
+  pu = push
+
+  reb = rebase
+  rebc = rebase --continue
+  rebs = rebase --skip
+
+  uns = reset HEAD          # removed from stage
 
   # log
   l = log --graph --date=short
@@ -33,6 +44,10 @@
   short = log --pretty=format:'%Cred%h %Cgreen(%cr) \t%C(bold blue):%cn:%Creset %s'
   changelog = log --pretty=format:' * %s'
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue):%an:%Creset' --abbrev-commit --date=relative
+
+  d = diff                  # unstaged
+  cached = diff --cached    # staged
+  last = diff HEAD^
 
 [user]
   name = Zaiste! λ

@@ -25,6 +25,17 @@ Get them for pleasure or as an inspiration.
  * `git rv` abbrev for `git remote -v`
  * `git br` abbrev for `git branch`
  * `git bv` abbrev for `git branch -v`
+ * `git co` abbrev for `git checkout`
+ * `git cb` abbrev for `git checkout -b`
+ * `git pl` abbrev for `git pull`
+ * `git pu` abbrev for `git push`
+ * `git reb` abbrev for `git rebase`
+ * `git rebc` abbrev for `git rebase --continue`
+ * `git rebs` abbrev for `git rebase --skip`
+ * `git uns` abbrev for `git reset HEAD`
+ * `git d` abbrev for `git diff`
+ * `git cached` abbrev for `git diff --cached`
+ * `git last` abbrev for `git diff HEAD^`
 
  * `git l` abbrev for `git log --graph --date=short`
  * `git changes` abbrev for 

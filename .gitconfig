@@ -1,17 +1,34 @@
 [color]
   ui = true
+
 [color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
+  current = bold blue reverse
+  local = blue 
+  remote = magenta 
+
 [color "diff"]
-  meta = yellow bold
-  frag = magenta bold
+  meta = white bold
+  frag = magenta ul 
   old = red bold
   new = green bold
+
+[color "status"]
+  added = blue 
+  changed = yellow 
+  untracked = white ul
+
+[color "grep"]
+  filename = bold yellow reverse
+  linenumber = magenta bold 
+  match = green reverse bold
+  separator = red bold
+  selected = white bold
+  context = black 
+  function = red
+
 [alias]
   a = add 
-  chunk = add --patch
+  chu = add --patch
 
   s = status --short
 
@@ -38,20 +55,32 @@
 
   uns = reset HEAD          # removed from stage
 
-  # log
-  l = log --graph --date=short
-  changes = log --pretty=format:'%Cred%h %Cgreen(%cr) %C(bold blue)<%cn>%Creset %s' --name-status
-  short = log --pretty=format:'%Cred%h %Cgreen(%cr) \t%C(bold blue):%cn:%Creset %s'
-  changelog = log --pretty=format:' * %s'
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue):%an:%Creset' --abbrev-commit --date=relative
+    # log
+    l = log --graph --date=short
 
-  d = diff                  # unstaged
-  cached = diff --cached    # staged
-  last = diff HEAD^
+    changes = log --pretty=format:'[%C(blue)%h%Creset] %C(cyan)%an%Creset %C(yellow)%cr: %C(white)%s' --name-status
+    short = log --pretty=format:'[%C(blue)%h%Creset] %C(cyan)%an%Creset %C(yellow)%cr: %C(white)%s'
+
+    changelog = log --pretty=format:' * %C(white)%s'
+    lg = log --graph --pretty=format:'[%C(blue)%h%Creset] -%C(red bold)%d%Creset %C(cyan)%an%Creset %C(yellow)%cr: %C(white)%s' --abbrev-commit --date=relative
+    summary = log --pretty=format:'[%C(blue)%h%Creset] %C(cyan)%an%Creset %C(yellow)%ar%Creset: %C(white)%s' --stat
+
+    d = diff                  # unstaged
+    dc = diff --cached    # staged
+    ds = diff --stat # staged
+    dlast = diff HEAD~1
+
+  g = grep --break --heading --line-number
 
 [user]
-  name = Zaiste! λ
+  name = Zaiste!
   email = oh@zaiste.net 
 
 [github]
   user = zaiste
+[grep]
+	lineNumber = true
+[diff]
+    tool = vimdiff
+[merge]
+	tool = vimdiff

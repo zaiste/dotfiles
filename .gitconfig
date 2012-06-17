@@ -1,5 +1,5 @@
 [color]
-  ui = true
+    ui = true 
 
 [color "branch"]
   current = bold blue reverse
@@ -56,14 +56,14 @@
   uns = reset HEAD          # removed from stage
 
     # log
-    l = log --graph --date=short
+    l = log --graph --date=short --decorate
 
     changes = log --pretty=format:'[%C(blue)%h%Creset] %C(cyan)%an%Creset %C(yellow)%cr: %C(white)%s' --name-status
-    short = log --pretty=format:'[%C(blue)%h%Creset] %C(cyan)%an%Creset %C(yellow)%cr: %C(white)%s'
+    los = log --pretty=format:'[%C(blue)%h%Creset] %C(cyan)%an%Creset %C(yellow)%cr: %C(white)%s'
 
     changelog = log --pretty=format:' * %C(white)%s'
-    lg = log --graph --pretty=format:'[%C(blue)%h%Creset] -%C(red bold)%d%Creset %C(cyan)%an%Creset %C(yellow)%cr: %C(white)%s' --abbrev-commit --date=relative
-    summary = log --pretty=format:'[%C(blue)%h%Creset] %C(cyan)%an%Creset %C(yellow)%ar%Creset: %C(white)%s' --stat
+    lof = log --graph --pretty=format:'[%C(blue)%h%Creset] -%C(red bold)%d%Creset %C(cyan)%an%Creset %C(yellow)%cr: %C(white)%s' --abbrev-commit --date=relative
+    lol = log --pretty=format:'[%C(blue)%h%Creset] %C(cyan)%an%Creset %C(yellow)%ar%Creset: %C(white)%s' --stat
 
     d = diff                  # unstaged
     dc = diff --cached    # staged

@@ -8,6 +8,11 @@ Get them for pleasure or as an inspiration.
 
 ## What's included
 
+### Ruby
+
+  * `gemrc` file
+
+
 ### Git
 
 #### Abbreviations

@@ -1,3 +1,7 @@
+[advice]
+    pushNonFastForward = false
+    statusHints = false
+
 [color]
     ui = true 
 
@@ -84,3 +88,5 @@
     tool = vimdiff
 [merge]
 	tool = vimdiff
+[push]
+	default = simple

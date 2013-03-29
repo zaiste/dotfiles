@@ -6,6 +6,13 @@ Get them for pleasure or as an inspiration.
 
 ## Install
 
+    cd
+    git clone git://github.com/zaiste/dotfiles.git
+    ln -sfn dotfiles/zshrc .zshrc
+    ln -sfn dotfiles/gemrc .gemrc
+    ln -sfn dotfiles/ackrc .ackrc
+    ln -sfn dotfiles/gitconfig .gitconfig
+
 ## What's included
 
 ### Ruby
@@ -43,27 +50,27 @@ Get them for pleasure or as an inspiration.
  * `git last` abbrev for `git diff HEAD^`
 
  * `git l` abbrev for `git log --graph --date=short`
- * `git changes` abbrev for 
-    git log 
+ * `git changes` abbrev for
+    git log
       --pretty=format:'
-        %Cred%h 
-        %Cgreen(%cr) 
-        %C(bold blue)<%cn>%Creset 
-        %s' 
+        %Cred%h
+        %Cgreen(%cr)
+        %C(bold blue)<%cn>%Creset
+        %s'
       --name-status
- * `git short` abbrev for 
-    git log 
+ * `git short` abbrev for
+    git log
       --pretty=format:'
-        %Cred%h 
+        %Cred%h
         %Cgreen(%cr)\t
-        %C(bold blue):%cn:%Creset 
+        %C(bold blue):%cn:%Creset
         %s'`
  * `git changelog` abbrev for `git log --pretty=format:' * %s'`
- * `git lg` abbrev for 
-    git log 
-      --graph 
+ * `git lg` abbrev for
+    git log
+      --graph
       --pretty=format:'
-        %Cred%h 
-        -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue):%an:%Creset' 
-      --abbrev-commit 
+        %Cred%h
+        -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue):%an:%Creset'
+      --abbrev-commit
       --date=relative

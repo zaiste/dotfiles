@@ -10,36 +10,34 @@ export CASE_SENSITIVE="true"
 # Comment this out to disable weekly auto-update checks
 # export DISABLE_AUTO_UPDATE="true"
 
-# Uncomment following line if you want to disable colors in ls
-# export DISABLE_LS_COLORS="true"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(rails3 git ruby gem bundler virtualenvwrapper pip)
-
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
+# Python
 PYTHON='/usr/local/share/python'
-HEROKU_TOOLBELT="/usr/local/heroku/bin"
+export WORKON_HOME=$HOME/.venv
 
-export PATH="$HEROKU_TOOLBELT:$HOME/.rbenv/bin:$HOME/bin:${HOME}/Library/Haskell/bin:${PYTHON}:/usr/local/bin:$PATH"
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
+export PIP_RESPECT_VIRTUALENV=true
+export VIRTUALENVWRAPPER_PYTHON='/usr/local/bin/python2.7'
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
+
+LOCAL="/usr/local"
+HEROKU="/usr/local/heroku"
+HASKELL="$HOME/Library/Haskell"
+
+export PATH="$HEROKU/bin:$HOME/bin:$HASKELL/bin:$PYTHON:$LOCAL/bin:$PATH"
 
 export EDITOR='vim'
 export LSCOLORS=""
 export LC_ALL=en_US.UTF-8
 
-source '/usr/local/etc/grc.bashrc'
-source "$HOME/.redis.sh"
-
-if [ -s ~/.nvm/nvm.sh ]; then
-    NVM_DIR=~/.nvm
-    source ~/.nvm/nvm.sh
-fi
-
 compctl -g '~/.teamocil/*(:t:r)' teamocil
 
 alias v='f -e vim' # quick opening files with vim
 
-source "$HOME/codespace/cu/script/cu.sh"
+source '/usr/local/share/python/virtualenvwrapper.sh'
+# source '/usr/local/etc/grc.bashrc'
+# source "$HOME/codespace/cu/script/cu.sh"
 
-eval "$(rbenv init -)"
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+plugins=(rails3 git ruby gem bundler virtualenvwrapper pip)

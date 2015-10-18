@@ -25,7 +25,9 @@ LOCAL="/usr/local"
 HEROKU="/usr/local/heroku"
 HASKELL="$HOME/Library/Haskell"
 
-export PATH="$HEROKU/bin:$HOME/bin:$HASKELL/bin:$PYTHON:$LOCAL/bin:$PATH"
+NPM="/usr/local/share/npm"
+
+export PATH="$NPM/bin:$HEROKU/bin:$HOME/bin:$HASKELL/bin:$PYTHON:$LOCAL/bin:$PATH"
 
 export EDITOR='vim'
 export LSCOLORS=""
@@ -34,10 +36,16 @@ export LC_ALL=en_US.UTF-8
 compctl -g '~/.teamocil/*(:t:r)' teamocil
 
 alias v='f -e vim' # quick opening files with vim
+alias scurl='curl -sL -w "%{http_code} %{url_effective} %{time_total}\\n" -o /dev/null'
 
 source '/usr/local/share/python/virtualenvwrapper.sh'
 # source '/usr/local/etc/grc.bashrc'
 # source "$HOME/codespace/cu/script/cu.sh"
 
+source '/usr/local/share/chruby/chruby.sh'
+source '/usr/local/share/chruby/auto.sh'
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 plugins=(rails3 git ruby gem bundler virtualenvwrapper pip)
+
+[[ -s $HOME/.pythonz/etc/bashrc ]] && source $HOME/.pythonz/etc/bashrc

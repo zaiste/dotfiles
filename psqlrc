@@ -1,0 +1,18 @@
+\set PROMPT1 '%M %n@%/ %R %# '
+
+-- Distinguish NULLs from empty strings
+\pset null '<NULL>'
+
+-- Switch to expanded table format if necessary
+\x auto
+
+\set VERBOSITY verbose
+
+-- Use a separate history file per-database.
+\set HISTFILE ~/.psql_history- :DBNAME
+
+-- If a command is run more than once in a row, only store it once in the
+-- history.
+\set HISTCONTROL ignoredups
+
+\set COMP_KEYWORD_CASE upper

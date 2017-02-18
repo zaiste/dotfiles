@@ -13,7 +13,7 @@
 [color "diff"]
   meta = white bold
   frag = magenta ul
-  old = red
+  old = red strike
   new = green
 
 [color "status"]
@@ -61,10 +61,10 @@
   uns = reset HEAD          # removed from stage
 
   # log
-  l = log --graph --date=short --decorate
+  l = log --pretty=format:'%C(blue)%h%Creset %C(red)%G?%Creset %C(white)%s %C(yellow)(%cr) %C(cyan)%an%Creset - %C(magenta)%gd'
+  los = log --graph --date=short --decorate
 
   changes = log --pretty=format:'[%C(blue)%h%Creset] %C(cyan)%an%Creset %C(yellow)%cr: %C(white)%s' --name-status
-  los = log --pretty=format:'[%C(blue)%h%Creset] %<(50)%C(white)%s %>(15)%C(cyan)%an%Creset %C(yellow)%cr'
 
   changelog = log --pretty=format:' * %C(white)%s'
   lof = log --graph --pretty=format:'[%C(blue)%h%Creset] -%C(red bold)%d%Creset %C(cyan)%an%Creset %C(yellow)%cr: %C(white)%s' --abbrev-commit --date=relative
@@ -78,8 +78,8 @@
   g = grep --break --heading --line-number
 
 [user]
-  name = Zaiste
-  email = oh@zaiste.net
+    name = Zaiste
+    email = oh@zaiste.net
 
 [github]
   user = zaiste
@@ -97,8 +97,11 @@
   ignorecase = false
   editor = /usr/local/bin/vim
 [filter "lfs"]
-  clean = git-lfs clean %f
-  smudge = git-lfs smudge %f
   required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 [pull]
   rebase = true
+[commit]
+    gpgsign = true

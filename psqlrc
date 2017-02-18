@@ -14,5 +14,5 @@
 -- If a command is run more than once in a row, only store it once in the
 -- history.
 \set HISTCONTROL ignoredups
-
 \set COMP_KEYWORD_CASE upper
+\set PSQL_EDITOR vim

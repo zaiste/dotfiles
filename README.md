@@ -1,4 +1,4 @@
-# Zaiste! dotfiles
+# Zaiste dotfiles
 
 ## Introduction
 
@@ -7,13 +7,15 @@ Get them for pleasure or as an inspiration.
 ## Install
 
     cd
-    git clone git://github.com/zaiste/dotfiles.git
+    git clone git://github.com/zaiste/dotfiles.git .dotfiles
     ln -sfn dotfiles/zshrc .zshrc
     ln -sfn dotfiles/gemrc .gemrc
     ln -sfn dotfiles/ackrc .ackrc
     ln -sfn dotfiles/gitconfig .gitconfig
 
 ## Setup
+
+    https://github.com/argon/mas
 
 ### XCode
 
@@ -22,31 +24,7 @@ and install the `Command Line Tools`.
 
 ### Homebrew
 
-Install Homebrew along with the following packages
-
-    brew install openssl readline git zsh vim ruby-build chruby
-    brew install ack tree imagemagick mongodb redis node
-
-### Ruby Install
-
-#### Ruby 2.0
-
-    CONFIGURE_OPTS=--with-openssl-dir=`brew --prefix openssl` ruby-build
-    2.0.0-preview1 ~/.rubies/ruby-2.0.0-preview1
-
-#### Ruby 1.9.3
-
-    CONFIGURE_OPTS=--with-openssl-dir=`brew --prefix openssl` ruby-build
-    1.9.3-p327 ~/.rubies/ruby-1.9.3-p327
-
-
-### Ruby Configuration
-
-```
-chruby [system|ruby-1.9.3]
-```
-
-  * `gemrc` file
+    brew bundle install
 
 
 ### Git

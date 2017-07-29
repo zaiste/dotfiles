@@ -1,7 +1,10 @@
 \set PROMPT1 '%M %n@%/ %R %# '
 
 -- Distinguish NULLs from empty strings
-\pset null '<NULL>'
+\pset null ¤
+
+\pset linestyle unicode
+\pset border 1
 
 -- Switch to expanded table format if necessary
 \x auto
@@ -9,10 +12,10 @@
 \set VERBOSITY verbose
 
 -- Use a separate history file per-database.
-\set HISTFILE ~/.psql_history- :DBNAME
-
--- If a command is run more than once in a row, only store it once in the
--- history.
+\set HISTFILE ~/.psql_history-:DBNAME
 \set HISTCONTROL ignoredups
+
 \set COMP_KEYWORD_CASE upper
 \set PSQL_EDITOR vim
+
+\set show_slow_queries 'SELECT (total_time / 1000 / 60) as total_minutes, (total_time/calls) as average_time, query FROM pg_stat_statements ORDER BY 1 DESC LIMIT 100;'

@@ -84,4 +84,4 @@ alias code=code-insiders
 
 # ---
 
-export PATH="/usr/local/sbin:$PATH"
+export PATH="/Applications/Racket v6.4/bin/:/usr/local/sbin:$PATH"

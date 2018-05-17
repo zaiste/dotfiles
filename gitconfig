@@ -83,7 +83,6 @@
 
 [github]
   user = zaiste
-  token = 8c6e70f2694a494afaae4772f08f85fc3166d0d9
 [grep]
   lineNumber = true
 [diff]

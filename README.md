@@ -26,6 +26,10 @@ and install the `Command Line Tools`.
 
     brew bundle install
 
+### Tools
+
+* [fd](https://github.com/sharkdp/fd) - A simple, fast and user-friendly alternative to 'find' 
+
 
 ### Git
 

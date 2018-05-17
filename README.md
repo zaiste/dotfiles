@@ -29,6 +29,7 @@ and install the `Command Line Tools`.
 ### Tools
 
 * [fd](https://github.com/sharkdp/fd) - A simple, fast and user-friendly alternative to 'find' 
+* [pgcli](https://github.com/dbcli/pgcli) - PostgreSQL CLI with autocompletion and syntax highlighting
 
 
 ### Git

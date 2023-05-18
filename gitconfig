@@ -61,7 +61,8 @@
   uns = reset HEAD          # removed from stage
 
   # log
-  l = log --pretty=format:'%C(blue)%h%Creset %C(red)%G?%Creset %C(white)%s %C(yellow)(%cr) %C(cyan)%an%Creset - %C(magenta)%gd'
+  l = log --pretty=format:'%C(blue)%h%Creset %C(black)%G?%Creset %C(white)%s %C(magenta)%d%Creset %C(cyan)%cr %C(yellow)%an%Creset'
+  lmc = l --no-merges --cherry-pick --right-only
   los = log --graph --date=short --decorate
 
   changes = log --pretty=format:'[%C(blue)%h%Creset] %C(cyan)%an%Creset %C(yellow)%cr: %C(white)%s' --name-status
@@ -76,6 +77,8 @@
   dlast = diff HEAD~1
 
   g = grep --break --heading --line-number
+
+  t = tag
 
 [user]
     name = Zaiste
@@ -92,9 +95,9 @@
 [push]
   default = current
 [core]
-  pager = less -r
+  pager = delta
   ignorecase = false
-  editor = /usr/local/bin/vim
+  editor = /Users/zaiste/.local/bin/lvim 
 [filter "lfs"]
   required = true
 	clean = git-lfs clean -- %f
@@ -104,3 +107,27 @@
   rebase = true
 [commit]
     gpgsign = true
+[init]
+	defaultBranch = main
+
+[interactive]
+  diffFilter = delta --color-only --features=interactive 
+
+[delta]
+    features = decorations
+  syntax-theme = OneHalfDark 
+
+[delta "interactive"]
+    keep-plus-minus-markers = false
+
+[delta "decorations"]
+    commit-decoration-style = blue ol
+    commit-style = raw
+    file-style = omit
+    hunk-header-decoration-style = blue box
+    hunk-header-file-style = red
+    hunk-header-line-number-style = "#067a00"
+    hunk-header-style = file line-number syntax
+
+[tag]
+	sort = -v:refname
